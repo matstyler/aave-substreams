@@ -10,7 +10,7 @@ dataSources:
     source:
       package:
         moduleName: graph_out
-        file: aave-substream-v0.0.1.spkg
+        file: aave_substream/aave-substream-v0.0.1.spkg
     mapping:
       kind: substreams/graph-entities
       apiVersion: 0.0.5

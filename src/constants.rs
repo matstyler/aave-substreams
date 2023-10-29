@@ -1,0 +1,10 @@
+use substreams::hex;
+
+// USDC Pool
+pub const TRACKED_POOL: [u8; 20] = hex!("87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2");
+
+// aUSDC
+pub const AUSDC_ASSET: [u8; 20] = hex!("98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c");
+
+// Debt USDC
+pub const USDC_DEBT_ASSET: [u8; 20] = hex!("72E95b8931767C79bA4EeE721354d6E99a61D004");

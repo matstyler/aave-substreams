@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package aave;
+
+enum TransferType {
+  SUPPLY = 0;
+  BORROW = 1;
+  REPAY = 2;
+  WITHDRAW = 3;
+}
+
+message Transfers {
+  repeated Transfer transfers = 1;
+}
+
+message Transfer {
+  string id = 1;
+  TransferType event = 2;
+  uint64 value = 3;
+  string pool_address = 4;
+}
+
+message Pool {
+  uint64 total_supply = 1;
+  uint64 total_borrow = 2;
+}
