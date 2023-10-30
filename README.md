@@ -80,7 +80,7 @@ yarn subgraph:deploy
 
 <br/>
 
-## Example query (get all the index transfers and pool state)
+## Example query (get all the indexed transfers and pool state)
 
 ```graphql
 {
