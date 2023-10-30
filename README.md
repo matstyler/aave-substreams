@@ -1,19 +1,87 @@
-# Substreams-powered subgraph: tracking contract creation
+# Aave Substreams based Subgraph
 
-A basic Substreams-powered subgraph, including the Substreams definition. This example detects new
-contract deployments on Ethereum, tracking the creation block and timestamp. There is a
-demonstration of the Graph Node integration, using `substreams_entity_change` types and helpers.
+- Track **USDC** pool **supply/borrow** transactions 
+- Follow `total supply` and `total borrow` state
 
-## Prerequisites
 
-This
-[requires the dependencies necessary for local Substreams development](https://substreams.streamingfast.io/developers-guide/installation-requirements).
+
+## Subgraph studio
+https://thegraph.com/studio/subgraph/aave-substreams/playground
+
+
+
+## Aave v3 - USDC pool page
+https://app.aave.com/reserve-overview/?underlyingAsset=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&marketName=proto_mainnet_v3
+
+
+
+## Requirements
+
+1. Rust - https://rustup.rs/
+
+2. Graph-cli - https://thegraph.com/docs/en/quick-start/#2-install-the-graph-cli
+
+3. substreams-cli - https://substreams.streamingfast.io/getting-started/installing-the-cli
+
+
 
 ## Quickstart
 
+Install graph-cli
+
 ```
-yarn install # install graph-cli
-yarn substreams:prepare # build and package the substreams module
-yarn subgraph:build # build the subgraph
-yarn subgraph:deploy # deploy the subgraph
+yarn install
+```
+
+Build and package the substreams module
+
+```
+yarn substreams:prepare
+```
+
+Run the substreams locally
+
+```
+yarn substreams:stream
+```
+
+Deploy the subgraph
+
+```
+yarn subgraph:deploy
+```
+
+
+
+## Structure
+
+- `substreams.yaml` - The substrems manifest
+- `src/modules` - The substream modules
+- `src/abi` - The ABI files
+- `src/constants.rs` - Contract addresses
+- `src/calls.rs` - Contract calls
+- `proto` - Messages structure
+
+
+- `subgraph.yaml` - The subgraph manifest
+- `schema.graphql` - The subgraph schema
+
+
+
+## Example query (get all the index transfers and pool state)
+
+```graphql
+{
+    pools {
+        id
+        last_transfer
+        total_supply
+        total_borrow
+        transfers {
+            id
+            type
+            amount
+        }
+    }
+}
 ```
