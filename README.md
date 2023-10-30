@@ -1,4 +1,4 @@
-# Aave Substreams based Subgraph
+# Aave Substream Powered Subgraph
 
 - Track **USDC** pool **supply/borrow** transactions 
 - Follow `total supply` and `total borrow` state
