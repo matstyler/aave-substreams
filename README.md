@@ -3,7 +3,18 @@
 - Track **USDC** pool **supply/borrow** transactions 
 - Follow `total supply` and `total borrow` state
 
+<br/>
 
+**Pool address**
+```
+0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2
+```
+**Initial block**
+```
+16496939
+```
+
+<br/>
 
 ## Subgraph studio
 https://thegraph.com/studio/subgraph/aave-substreams/playground
@@ -14,6 +25,7 @@ https://thegraph.com/studio/subgraph/aave-substreams/playground
 https://app.aave.com/reserve-overview/?underlyingAsset=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&marketName=proto_mainnet_v3
 
 
+<br/>
 
 ## Requirements
 
@@ -23,7 +35,7 @@ https://app.aave.com/reserve-overview/?underlyingAsset=0xa0b86991c6218b36c1d19d4
 
 3. substreams-cli - https://substreams.streamingfast.io/getting-started/installing-the-cli
 
-
+<br/>
 
 ## Quickstart
 
@@ -51,7 +63,7 @@ Deploy the subgraph
 yarn subgraph:deploy
 ```
 
-
+<br/>
 
 ## Structure
 
@@ -66,7 +78,7 @@ yarn subgraph:deploy
 - `subgraph.yaml` - The subgraph manifest
 - `schema.graphql` - The subgraph schema
 
-
+<br/>
 
 ## Example query (get all the index transfers and pool state)
 
